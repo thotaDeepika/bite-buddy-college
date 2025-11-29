@@ -51,6 +51,17 @@ export interface Review {
   user?: User;
 }
 
+export interface FoodItemWithDetails extends FoodItem {
+  locations?: {
+    location_name: string;
+    address?: string;
+    location_type: string;
+  };
+  food_categories?: {
+    category_name: string;
+  };
+}
+
 export interface Favorite {
   id: string;
   user_id: string;
